@@ -1,0 +1,10 @@
+- name: Inicio
+  link: /
+- name: Locaciones
+  link: /locaciones.html
+- name: Servicios
+  link: /servicios.html
+- name: Galería
+  link: /galeria.html
+- name: Contacto
+  link: /contacto.html
