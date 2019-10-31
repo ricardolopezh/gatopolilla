@@ -29,7 +29,10 @@ title: "Contacto"
 <div class="row">
   <div class="col-lg-12">
     <h3>Siguenos en nuestras redes sociales</h3>
-    <p>Facebook</p>
-    <p>Instagram</p>
+    {% for item in site.data.social %}
+      <a href="{{ item.link }}">
+        {{ item.name }}
+      </a>
+    {% endfor %}  
   </div>
 </div>
