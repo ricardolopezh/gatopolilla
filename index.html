@@ -9,9 +9,9 @@ title: "Inicio"
   <ol class="carousel-indicators">
   {% for image in images %}
     {% if forloop.first == true %}
-      <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index }}" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index0 }}" class="active"></li>
     {% else %}
-      <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index }}"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index0 }}"></li>
     {% endif %}
   {% endfor %}
   </ol>
