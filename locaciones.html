@@ -3,30 +3,11 @@ layout: default
 title: "Locaciones"
 ---
 <div id="cuadricula" class="row justify-content-around">
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/locaciones/img1.jpg' | relative_url }}" alt="Monumento a la revolución" class="img-thumbnail">
-    <span>Monumento a la revolución</span>
-  </div>
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/locaciones/img2.jpg' | relative_url }}" alt="Paseo de la reforma" class="img-thumbnail">
-    <span>Paseo de la reforma</span>
-  </div>
-
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/locaciones/img3.jpg' | relative_url }}" alt="Parque México" class="img-thumbnail">
-    <span>Parque México</span>
-  </div>
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/locaciones/img4.jpg' | relative_url }}" alt="Parque Hundido" class="img-thumbnail">
-    <span>Parque Hundido</span>
-  </div>
-
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/locaciones/img5.jpg' | relative_url }}" alt="Parque la bombilla" class="img-thumbnail">
-    <span>Parque la bombilla</span>
-  </div>
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/locaciones/img6.jpg' | relative_url }}" alt="Jardín botanico UNAM" class="img-thumbnail">
-    <span>Jardín botanico UNAM</span>
-  </div>
+  {% assign images = site.static_files | where: "locations", true %}
+  {% for image in images %}
+    <div class="col-lg-6">
+      <img src="{{ image.path }}" alt="{{ image.basename }}" class="img-thumbnail">
+        <span>{{ image.basename }}</span>
+    </div>
+  {% endfor %}
 </div>

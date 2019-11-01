@@ -3,30 +3,11 @@ layout: default
 title: "Servicios"
 ---
 <div id="cuadricula" class="row justify-content-around">
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/servicios/img1.jpg' | relative_url }}" alt="Monumento a la revolución" class="img-thumbnail">
-      <span>Fotografía en interiores</span>
-  </div>
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/servicios/img2.jpg' | relative_url }}" alt="Paseo de la reforma" class="img-thumbnail">
-    <span>Fotografía en exteriores</span>
-  </div>
-
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/servicios/img3.jpg' | relative_url }}" alt="Parque México" class="img-thumbnail">
-    <span>Fotografía de shows</span>
-  </div>
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/servicios/img4.jpg' | relative_url }}" alt="Parque Hundido" class="img-thumbnail">
-    <span>Fotografía urbana</span>
-  </div>
-
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/servicios/img5.jpg' | relative_url }}" alt="Parque la bombilla" class="img-thumbnail">
-    <span>Fotografía de eventos</span>
-  </div>
-  <div class="col-lg-6">
-    <img src="{{ '/assets/img/servicios/img6.jpg' | relative_url }}" alt="Jardín botanico UNAM" class="img-thumbnail">
-    <span>Fotografía de productos</span>
-  </div>
+  {% assign images = site.static_files | where: "services", true %}
+  {% for image in images %}
+    <div class="col-lg-6">
+      <img src="{{ image.path }}" alt="{{ image.basename }}" class="img-thumbnail">
+        <span>{{ image.basename }}</span>
+    </div>
+  {% endfor %}
 </div>
