@@ -14,3 +14,7 @@ defaults:
       path: "assets/img/locaciones"
     values:
       locations: true
+  - scope:
+      path: "assets/img/carousel"
+    values:
+      carousel: true
