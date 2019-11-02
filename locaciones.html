@@ -6,7 +6,7 @@ title: "Locaciones"
   {% assign images = site.static_files | where: "locations", true %}
   {% for image in images %}
     <div class="col-lg-6">
-      <img src="{{ image.path }}" alt="{{ image.basename }}" class="img-thumbnail">
+      <img src="{{ image.path | relative_url }}" alt="{{ image.basename }}" class="img-thumbnail">
         <span>{{ image.basename }}</span>
     </div>
   {% endfor %}
