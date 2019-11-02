@@ -4,20 +4,24 @@ title: "Contacto"
 ---
 <div class="row" id="contactRow">
 	<div class="col-lg-4">
-    <form>
+    <form action="#">
       <div class="form-group">
-        <label for="formGroupExampleInput">Nombre</label>
-        <input type="text" class="form-control" placeholder="Nombre">
+        <label for="formGroupNombre">Nombre</label>
+        <input type="text" class="form-control" placeholder="Nombre" required>
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput2">Edad</label>
-        <input type="number" class="form-control" placeholder="Edad">
+        <label for="formGroupEdad">Edad</label>
+        <input type="number" class="form-control" placeholder="Edad" required>
       </div>
       <div class="form-group">
-        <label for="formGroupExampleInput2">Teléfono</label>
-        <input type="tel" class="form-control" placeholder="Número de teléfono">
+        <label for="formGroupCorreo">E-mail</label>
+        <input type="email" class="form-control" placeholder="Correo electrónico" required>
       </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <div class="form-group">
+        <label for="formGroupTelefono">Teléfono</label>
+        <input type="tel" class="form-control" placeholder="Número de teléfono" required>
+      </div>
+      <button type="submit" class="btn btn-outline-dark">Enviar</button>
     </form>
   </div>
   <div class="col-lg-6 offset-lg-2">
