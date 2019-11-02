@@ -1,4 +1,6 @@
 - name: Facebook
   link: https://www.facebook.com/gatopolillafoto/
+  icon: <i class="fab fa-facebook-square"></i>
 - name: Instagram
   link: https://www.instagram.com/gato_polilla/
+  icon: <i class="fab fa-instagram"></i>
