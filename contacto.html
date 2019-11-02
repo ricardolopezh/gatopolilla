@@ -21,18 +21,15 @@ title: "Contacto"
     </form>
   </div>
   <div class="col-lg-6 offset-lg-2">
-    <h2>Pasa de ser seguidor a ser seguido</h2>
-    <p>Sabemos que quieres fotografias de calidad a un precio justo por eso te regalamos un descuento del 30% en tu primera sesión</p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-lg-12">
     <h3>Siguenos en nuestras redes sociales</h3>
+
     {% for item in site.data.social %}
-      <a href="{{ item.link }}">
-        {{ item.name }}
-      </a>
-    {% endfor %}  
+      <p class="social-icons">
+        <span>{{ item.icon }}</span>
+        <a href="{{ item.link }}">
+          {{ item.name }}
+        </a>
+      </p>
+    {% endfor %}
   </div>
 </div>
