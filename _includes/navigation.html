@@ -6,7 +6,7 @@
 <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
   <div class="navbar-nav">
   	{% for item in site.data.navigation %}
-      <a class="nav-item nav-link" href="{{ item.link }}">
+      <a class="nav-item nav-link" href="{{ item.link | relative_url }}">
       	{{ item.name }}
       </a>
     {% endfor %}  
